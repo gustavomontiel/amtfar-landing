@@ -1,0 +1,663 @@
+/* --- VARIABLES E IDENTIDAD --- */
+:root {
+    --verde-farmacia: #008f39;
+    --verde-claro: #e8f5e9;
+    --oscuro: #1d1d1b;
+    --gris-suave: #f4f7f6;
+    --blanco: #ffffff;
+    --transicion: all 0.3s ease;
+}
+
+/* --- RESET Y BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--oscuro);
+    background-color: var(--blanco);
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- HEADER & NAV --- */
+.main-header {
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    background: var(--blanco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-subtitle {
+    display: none;
+}
+
+.main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--blanco);
+    padding: 2rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav.active {
+    display: block;
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.main-nav ul li {
+    margin-bottom: 1.5rem;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--oscuro);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* --- DROPDOWN MENU --- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--blanco);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+}
+
+.dropdown-content li {
+    margin: 0 !important;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    font-size: 1rem !important;
+    transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--verde-claro);
+    color: var(--verde-farmacia);
+}
+
+/* Show dropdown on click (mobile & desktop) */
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Rotate chevron when active */
+.dropdown.active .fa-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+
+.mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--verde-farmacia);
+    cursor: pointer;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--blanco) 0%, var(--verde-claro) 100%);
+    text-align: center;
+}
+
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero-content {
+    margin-bottom: 3rem;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin: 1.5rem 0;
+    color: var(--oscuro);
+}
+
+/* --- BOTONES --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transicion);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-empleado {
+    background: var(--verde-farmacia);
+    color: var(--blanco);
+    border: 2px solid var(--verde-farmacia);
+}
+
+.btn-farmacia {
+    border: 2px solid var(--verde-farmacia);
+    color: var(--verde-farmacia);
+    background: transparent;
+}
+
+/* --- NOVEDADES --- */
+.news-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.news-card {
+    background: var(--gris-suave);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 5px solid var(--verde-farmacia);
+}
+
+/* --- TURISMO INDEX (CARRUSEL) --- */
+.hotel-carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: none;
+}
+
+.hotel-carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.hotel-card-mini {
+    flex: 0 0 280px;
+    scroll-snap-align: center;
+    background: var(--blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.hotel-img-mini {
+    position: relative;
+    height: 180px;
+}
+
+.hotel-img-mini img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hotel-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: var(--verde-farmacia);
+    color: white;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.hotel-info-mini {
+    padding: 1.2rem;
+    text-align: center;
+}
+
+/* --- TURISMO.HTML DETALLES --- */
+.destino-full-card {
+    background: var(--blanco);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem;
+    border: 1px solid #eee;
+}
+
+.carousel-static {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mapa-box {
+    height: 250px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin-top: 1.5rem;
+}
+
+/* --- CONTACTO --- */
+.section-mapa {
+    padding: 4rem 0;
+    background: var(--gris-suave);
+}
+
+.grid-2 {
+    display: grid;
+    gap: 2rem;
+}
+
+.lista-contacto {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.lista-contacto li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1rem;
+}
+
+.lista-contacto i {
+    color: var(--verde-farmacia);
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    background: var(--oscuro);
+    color: var(--blanco);
+    padding: 1rem 0 1rem;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 3rem;
+    text-align: center;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (min-width: 1024px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+        position: static;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .main-nav>ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .main-nav ul li {
+        margin-bottom: 0;
+    }
+
+    .btn {
+        width: auto;
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-align: left;
+        gap: 4rem;
+    }
+
+    .hero-content {
+        margin-bottom: 0;
+    }
+
+
+
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hotel-carousel-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow: visible;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .destino-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+    }
+
+    .footer-grid {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1280px) {
+    .header-subtitle {
+        display: block !important;
+    }
+}
+
+/* --- CUSTOM CAROUSEL (INDEX TURISMO) --- */
+.custom-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /* Ajustable según necesidad */
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 3rem 1.5rem 1.5rem;
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+/* Controls */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+
+.carousel-control:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--verde-farmacia);
+}
+
+.carousel-control.prev {
+    left: 20px;
+}
+
+.carousel-control.next {
+    right: 20px;
+}
+
+/* Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active,
+.dot:hover {
+    background: var(--verde-farmacia);
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 300px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.4rem;
+    }
+
+    .carousel-control {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+}
+
+/* --- LIGHTBOX (AMPLIAR IMÁGENES) --- */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 29, 27, 0.95);
+    /* Color oscuro con opacidad */
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+
+.lightbox.active img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 2001;
+    line-height: 1;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.1);
+}
+
+
+
+.lightbox-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 2001;
+    padding: 0 20px;
+    user-select: none;
+    transition: all 0.2s ease;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-prev {
+    left: 10px;
+}
+
+.lightbox-next {
+    right: 10px;
+}
+
+.lightbox-nav-btn:hover {
+    transform: translateY(-50%) scale(1.2);
+    color: var(--verde-farmacia);
+}
+
+/* Efecto hover suave en imagenes para dar feedback */
+.carousel-item img {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.02);
+}
