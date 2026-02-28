@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneficios - AMTFAR</title>
+    <link rel="icon" type="image/png" href="assets/img/logo-amtfar.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .beneficio-full-card {
+            background: var(--blanco);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border: 1px solid #eee;
+            padding: 2rem;
+        }
+
+        .promo-banner-top {
+            background: var(--verde-farmacia);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .beneficio-full-card h3 {
+            color: var(--verde-farmacia);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--verde-farmacia);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .beneficio-full-card ul {
+            list-style: none;
+            /* Quitamos viñetas estándar */
+            padding-left: 0;
+        }
+
+        .beneficio-full-card ul li {
+            position: relative;
+            padding-left: 25px;
+            /* Espacio para el icono */
+            margin-bottom: 10px;
+        }
+
+        .beneficio-full-card ul li::before {
+            content: "\f00c";
+            /* Código Unicode para fa-check en Font Awesome */
+            font-family: 'Font Awesome 5 Free';
+            /* O 'Font Awesome 6 Free', según la versión que use */
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--verde-farmacia);
+            /* Color del tilde verde */
+        }
+
+        .requisitos-card {
+            background: #f8f9fa;
+            border-left: 4px solid var(--verde-farmacia);
+            padding: 1.5rem;
+            border-radius: 0 10px 10px 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand"
+                style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+                <img src="assets/img/logo-amtfar.png" alt="Logo AMTFAR" style="height: 50px;">
+                <div style="display: flex; flex-direction: column; line-height: 1.2;">
+                    <span class="logo-text"
+                        style="font-size: 1.6rem; font-weight: 900; color: var(--verde-farmacia);">AMT<span
+                            style="color: var(--oscuro);">FAR</span></span>
+                    <span class="logo-text header-subtitle"
+                        style="font-size: 0.8rem; font-weight: 500; color: var(--oscuro); letter-spacing: 0.5px;">Asociación
+                        Misionera de Trabajadores de Farmacia</span>
+                </div>
+            </a>
+            <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+            <nav class="main-nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" style="cursor: pointer;">Salarios <i class="fas fa-chevron-down"
+                                style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="https://fatfa.org.ar/escalas-salariales/" target="_blank">Escalas
+                                    Salariales</a></li>
+                            <li><a href="https://fatfa.org.ar/actas-acuerdo/" target="_blank">Actas Acuerdo</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" style="cursor: pointer;">Convenios <i class="fas fa-chevron-down"
+                                style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a target="_blank"
+                                    href="https://fatfa.org.ar/wp-content/uploads/2022/02/cct_659_2013.pdf">CCT
+                                    659/13</a></li>
+                            <li><a target="_blank"
+                                    href="https://fatfa.org.ar/wp-content/uploads/2022/04/cct55609vigente.pdf">CCT
+                                    556/09</a></li>
+                            <li><a target="_blank"
+                                    href="https://fatfa.org.ar/wp-content/uploads/2022/06/cct2688.pdf">CCT 2688</a></li>
+                            <li><a target="_blank"
+                                    href="https://fatfa.org.ar/wp-content/uploads/2022/06/cct6375.pdf">CCT 6375</a></li>
+                            <li><a target="_blank"
+                                    href="https://fatfa.org.ar/wp-content/uploads/2022/06/cct45206.pdf">CCT 45206</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="beneficios.html" style="color: var(--verde-farmacia); font-weight: 700;">Beneficios</a>
+                    </li>
+                    <li><a href="turismo.html">Turismo</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="https://www.ospf.org.ar/" target="_blank">OSPF</a></li>
+                </ul>
+            </nav>
+            <div class="access-buttons">
+                <a href="https://empleados.amtfar.com.ar" class="btn btn-empleado">Farmacias</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="promo-banner-top">Beneficios Exclusivos AMTFAR</div>
+
+    <main class="container" style="padding: 3rem 0;">
+        <h1 style="text-align: center; margin-bottom: 1rem; color: var(--verde-farmacia);">Nuestros Beneficios</h1>
+        <p style="text-align: center; margin-bottom: 3rem; color: #555;">Sr AFILIADO CON SU APORTE DE CUOTA SINDICAL Y
+            COSEGURO POR JORNADA COMPLETA, USTED GOZA DE LOS SIGUIENTES BENEFICIOS:</p>
+
+        <article class="beneficio-full-card">
+            <h3><i class="fas fa-school" style="margin-right: 10px;"></i>Escolares</h3>
+            <p><strong>AL INICIO DE CLASES ENTREGA DE BOLSA CON ÚTILES ESCOLARES DESDE EL NIVEL INICIAL HASTA 7°
+                    GRADO.</strong></p>
+            <p>Presentando constancia de alumno regular ó Libreta de fin de curso antes de finalizar el año escolar.</p>
+            <ul>
+                <li><strong>1 GUARDAPOLVO.</strong></li>
+                <li><strong>LIBRO DE TEXTO PRIMARIO, REINTEGRO DEL 50%.</strong> (presentando pedido del colegio,
+                    factura ó ticket original y último recibo de sueldo)</li>
+                <li>Reintegro de materiales escolares de $ 30.000 a los chicos de 3, 4 y 5 años con presentación del
+                    pedido de la escuela y la boleta de compra a nombre de A.M.T.Far.</li>
+            </ul>
+            <p style="text-align: center; font-weight: bold; margin-top: 1.5rem; color: #d9534f;">Todos los reintegros
+                escolares se realizaran hasta fin de Abril como último plazo</p>
+        </article>
+
+        <article class="beneficio-full-card">
+            <h3><i class="fas fa-balance-scale" style="margin-right: 10px;"></i>Asesoramientos</h3>
+            <p>*(presentando siempre el último Recibo de Sueldo)*</p>
+            <ul>
+                <li>ASESORAMIENTO JURIDICO</li>
+                <li>ASESORAMIENTO PREVISIONAL</li>
+                <li>ASESORAMIENTO SOBRE LIQUIDACIONES DE SUELDOS</li>
+            </ul>
+        </article>
+
+        <article class="beneficio-full-card">
+            <h3><i class="fas fa-heartbeat" style="margin-right: 10px;"></i>Ortopedia, Odontología y Oftalmología</h3>
+            <p>Reintegros en Ortopedia, Odontología y Oftalmología: <strong>Receta Original y copia último Recibo de
+                    Sueldo.</strong></p>
+            <div style="margin-top: 1.5rem;">
+                <h4 style="margin-bottom: 0.5rem; color: var(--oscuro);">ORTOPEDIA</h4>
+                <ul>
+                    <li>ZAPATOS ORTOPEDICO Y PLANTILLAS Cobertura 50%</li>
+                </ul>
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <h4 style="margin-bottom: 0.5rem; color: var(--oscuro);">ODONTOLOGIA</h4>
+                <ul>
+                    <li>PROTESIS DENTAL (4 ó más) ACRILICO 70% p/reintegro.</li>
+                </ul>
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <h4 style="margin-bottom: 0.5rem; color: var(--oscuro);">OFTALMOLOGIA</h4>
+                <ul>
+                    <li>CRISTALES COMUNES Y FOTOCROMATICOS 50% <br>(No Multifocales). <strong>Por reintegro, una vez por
+                            año para cada integrante del grupo familiar.</strong></li>
+                    <li>COBERTURA DEL 25% en armazones.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="beneficio-full-card">
+            <h3><i class="fas fa-baby" style="margin-right: 10px;"></i>Recién Nacidos</h3>
+            <p>POR REINTEGRO:</p>
+            <ul>
+                <li><strong>60 PAÑALES POR MES</strong>, DURANTE LOS PRIMEROS 9 (nueve) MESES. (Reintegro 100% no
+                    acumulativo)</li>
+                <li><strong>LECHE:</strong> 3 (tres) ENVASES POR MES HASTA EL AÑO, A PARTIR DE LOS TRES MESES; (Valor
+                    equivalente a la leche "Nido" entera)</li>
+            </ul>
+        </article>
+
+        <article class="beneficio-full-card">
+            <h3><i class="fas fa-ribbon" style="margin-right: 10px;"></i>Sepelio</h3>
+            <ul>
+                <li><strong>COBERTURA 100 % DE SALÓN VELATORIO</strong></li>
+            </ul>
+        </article>
+
+        <div class="requisitos-card">
+            <h4 style="color: var(--oscuro); margin-bottom: 0.5rem; font-size: 1.2rem;">Para percibir los reintegros:
+            </h4>
+            <p style="font-weight: bold; font-size: 1.1rem; line-height: 1.5;">presentar factura ó ticket a nombre de
+                "Asociación Misionera de Trabajadores de Farmacia"<br>CUIT N° 30-61690619-0 Factura B o C - IVA
+                Exento<br>(por razones contables) y último recibo de sueldo.</p>
+        </div>
+
+    </main>
+
+    <section id="contacto" class="section-mapa">
+        <div class="container grid-2">
+            <div class="contacto-info">
+                <h2>Contactanos:</h2>
+                <ul class="lista-contacto">
+                    <li><i class="fas fa-map-marker-alt"></i> Belgrano 1644 – Posadas. CP 3300.</li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+543764438240"
+                            style="text-decoration: none; color: inherit;">+54 376-4438240</a></li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5493764700290" target="_blank"
+                            style="text-decoration: none; color: inherit;">+54 3764-700290</a></li>
+                    <li><i class="fas fa-envelope"></i> administracion@amtfar.com.ar</li>
+                    <li><i class="fas fa-clock"></i> HORARIO DE ATENCIÓN: lunes a viernes de 9 a 17hs.</li>
+                </ul>
+            </div>
+            <div class="mapa-container">
+                <iframe
+                    src="https://maps.google.com/maps?q=Belgrano+1644,+Posadas,+Misiones&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="350" style="border:0; border-radius:15px;" allowfullscreen=""
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand"><span
+                    style="font-size: 2rem; font-weight: 900; color: var(--verde-farmacia);">AMT<span>FAR</span></span>
+                <p>Tel: 376-4438240 - email: administracion@amtfar.com.ar</p>
+                <p>© 2026 AMTFAR - Asociación Misionera de Trabajadores de Farmacias.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            menuToggle.querySelector('i').classList.toggle('fa-bars');
+            menuToggle.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // DROPDOWN CLICK LOGIC
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                const dropdownLink = dropdown.querySelector('a');
+
+                dropdownLink.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent hash navigation
+                    // Close other open dropdowns
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.dropdown')) {
+                    dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
