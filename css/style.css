@@ -176,8 +176,9 @@ img {
     border-radius: 20px;
 }
 
-.hero-content {
-    margin-bottom: 3rem;
+.hero-grid {
+    display: grid;
+    gap: 2rem;
 }
 
 .hero-content h1 {
@@ -385,10 +386,6 @@ img {
         align-items: center;
         text-align: left;
         gap: 4rem;
-    }
-
-    .hero-content {
-        margin-bottom: 0;
     }
 
 
