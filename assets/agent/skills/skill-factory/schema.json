@@ -1,0 +1,15 @@
+{
+    "input": {
+        "nombre_skill": "string",
+        "objetivo": "string",
+        "nivel_libertad": "integer"
+    },
+    "output": {
+        "path": "string",
+        "files": [
+            "SKILL.md",
+            "recursos/",
+            "scripts/"
+        ]
+    }
+}
