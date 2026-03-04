@@ -29,6 +29,40 @@ body {
     margin: 0 auto;
 }
 
+/* --- UTILITIES --- */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.section-padding {
+    padding: 4rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -43,6 +77,41 @@ img {
     background: var(--blanco);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.brand-logo {
+    height: 50px;
+}
+
+.brand-text-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.brand-title {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--verde-farmacia);
+}
+
+.brand-title span {
+    color: var(--oscuro);
+}
+
+.header-subtitle {
+    display: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--oscuro);
+    letter-spacing: 0.5px;
 }
 
 .nav-wrapper {
@@ -124,6 +193,15 @@ img {
     display: block;
 }
 
+.dropdown>a {
+    cursor: pointer;
+}
+
+.dropdown>a i {
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
 /* Rotate chevron when active */
 .dropdown.active .fa-chevron-down {
     transform: rotate(180deg);
@@ -174,7 +252,17 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: bottom;
     border-radius: 20px;
+}
+
+.hero-badge {
+    background: var(--verde-farmacia);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block;
 }
 
 .hero-grid {
@@ -229,6 +317,24 @@ img {
     border-left: 5px solid var(--verde-farmacia);
 }
 
+.news-card-img-wrapper {
+    margin-bottom: 1rem;
+}
+
+.news-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.news-card-category {
+    color: var(--verde-farmacia);
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
 /* --- TURISMO INDEX (CARRUSEL) --- */
 .hotel-carousel-container {
     display: flex;
@@ -281,6 +387,17 @@ img {
 }
 
 /* --- TURISMO.HTML DETALLES --- */
+.promo-banner-top {
+    background: var(--verde-farmacia);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
 .destino-full-card {
     background: var(--blanco);
     border-radius: 20px;
@@ -290,19 +407,66 @@ img {
     border: 1px solid #eee;
 }
 
+.destino-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.info-column {
+    padding: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .destino-grid {
+        grid-template-columns: 1.2fr 1fr;
+    }
+
+    .info-column {
+        padding: 3rem !important;
+    }
+}
+
 .carousel-static {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 10px;
-    padding: 10px 0;
+    gap: 15px;
+    padding: 10px 0 15px;
+    /* Más padding para la barra de scroll */
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: var(--verde-farmacia) #eee;
+}
+
+.carousel-static::-webkit-scrollbar {
+    height: 8px;
+    /* Chrome/Safari */
+    display: block;
+}
+
+.carousel-static::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 4px;
+}
+
+.carousel-static::-webkit-scrollbar-thumb {
+    background: var(--verde-farmacia);
+    border-radius: 4px;
 }
 
 .carousel-item {
-    flex: 0 0 100%;
+    flex: 0 0 85%;
+    /* En móvil ocupa el 85% para centrarlo y dejar asomar el siguiente */
     scroll-snap-align: center;
     border-radius: 10px;
     overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .carousel-item {
+        flex: 0 0 90%;
+        /* En escritorio deja asomar un 10% de la siguiente hoja */
+    }
 }
 
 .mapa-box {
@@ -312,6 +476,81 @@ img {
     overflow: hidden;
     border: 1px solid #ddd;
     margin-top: 1.5rem;
+}
+
+.mapa-box iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* --- BENEFITS INDEX --- */
+.beneficio-full-card {
+    background: var(--blanco);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    border: 1px solid #eee;
+    padding: 2rem;
+}
+
+.beneficio-full-card h3 {
+    color: var(--verde-farmacia);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--verde-farmacia);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.beneficio-full-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.beneficio-full-card ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.beneficio-full-card ul li::before {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--verde-farmacia);
+}
+
+.requisitos-card {
+    background: #f8f9fa;
+    border-left: 4px solid var(--verde-farmacia);
+    padding: 1.5rem;
+    border-radius: 0 10px 10px 0;
+    margin-top: 2rem;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    margin-bottom: 1rem;
+}
+
+.benefits-list i {
+    color: var(--verde-farmacia);
+    margin-right: 10px;
+}
+
+.benefits-img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* --- CONTACTO --- */
@@ -337,8 +576,21 @@ img {
     margin-bottom: 1rem;
 }
 
+.lista-contacto a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .lista-contacto i {
     color: var(--verde-farmacia);
+}
+
+.mapa-container iframe {
+    border: 0;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
 }
 
 /* --- FOOTER --- */
@@ -346,6 +598,10 @@ img {
     background: var(--oscuro);
     color: var(--blanco);
     padding: 1rem 0 1rem;
+}
+
+.main-footer .brand-title span {
+    color: var(--blanco);
 }
 
 .footer-grid {

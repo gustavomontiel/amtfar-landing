@@ -31,24 +31,18 @@
 <body>
     <header class="main-header">
         <div class="container nav-wrapper">
-            <a href="index.html" class="brand"
-                style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                <img src="assets/img/logo-amtfar.webp" alt="Logo AMTFAR" style="height: 50px;">
-                <div style="display: flex; flex-direction: column; line-height: 1.2;">
-                    <span class="logo-text"
-                        style="font-size: 1.6rem; font-weight: 900; color: var(--verde-farmacia);">AMT<span
-                            style="color: var(--oscuro);">FAR</span></span>
-                    <span class="logo-text header-subtitle"
-                        style="font-size: 0.8rem; font-weight: 500; color: var(--oscuro); letter-spacing: 0.5px;">Asociación
-                        Misionera de Trabajadores de Farmacia</span>
+            <a href="index.html" class="brand">
+                <img src="assets/img/logo-amtfar.webp" alt="Logo AMTFAR" class="brand-logo">
+                <div class="brand-text-container">
+                    <span class="logo-text brand-title">AMT<span>FAR</span></span>
+                    <span class="logo-text header-subtitle">Asociación Misionera de Trabajadores de Farmacia</span>
                 </div>
             </a>
             <button class="mobile-menu-toggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
             <nav class="main-nav">
                 <ul>
                     <li class="dropdown">
-                        <a href="#" style="cursor: pointer;">Salarios <i class="fas fa-chevron-down"
-                                style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                        <a href="#">Salarios <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-content">
                             <li><a href="https://fatfa.org.ar/escalas-salariales/" target="_blank"
                                     rel="noopener noreferrer">Escalas
@@ -58,8 +52,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" style="cursor: pointer;">Convenios <i class="fas fa-chevron-down"
-                                style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                        <a href="#">Convenios <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-content">
                             <li><a target="_blank" rel="noopener noreferrer"
                                     href="https://fatfa.org.ar/wp-content/uploads/2022/02/cct_659_2013.pdf">CCT
@@ -92,23 +85,20 @@
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <span
-                    style="background: var(--verde-farmacia); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem;">Institución
-                    al servicio del trabajador</span>
+                <span class="hero-badge">Institución al servicio del trabajador</span>
                 <h1>Cuidando a quienes cuidan nuestra salud</h1>
                 <p>Junto a <a href="https://fatfa.org.ar/" target="_blank" rel="noopener noreferrer">FATFA</a>
                     representamos, apoyamos y brindamos
                     beneficios exclusivos a los empleados de farmacia de todo el
                     país.</p>
-                <div style="margin-top: 2rem;">
+                <div class="mt-2">
                     <a href="#contacto" class="btn btn-empleado">Consultanos</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="hero-carousel">
                     <div class="hero-slide active">
-                        <img src="assets/img/edificio.webp" alt="Nuestro edificio" fetchpriority="high"
-                            style="object-fit: cover; object-position: bottom; width: 100%; height: 100%;">
+                        <img src="assets/img/edificio.webp" alt="Nuestro edificio" fetchpriority="high">
                     </div>
                     <div class="hero-slide">
                         <img src="assets/img/hero-farmacia.webp" alt="Atención en farmacia">
@@ -118,103 +108,85 @@
         </div>
     </section>
 
-    <section id="novedades" style="padding: 4rem 0;">
+    <section id="novedades" class="section-padding">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;">
+            <div class="section-header">
                 <h2>Novedades y Acuerdos</h2>
                 <p>Mantenete al tanto de los últimos acuerdos salariales y noticias gremiales.</p>
             </div>
             <div class="news-grid">
                 <article class="news-card">
-                    <div style="margin-bottom: 1rem;">
+                    <div class="news-card-img-wrapper">
                         <img src="https://fatfa.org.ar/wp-content/uploads/2025/11/ESCALA-FATFA-noviembre-400x250.jpg"
-                            alt="Escala Salarial Febrero 2026"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" loading="lazy">
+                            alt="Escala Salarial Febrero 2026" class="news-card-img" loading="lazy">
                     </div>
-                    <div
-                        style="color: var(--verde-farmacia); font-weight: 700; font-size: 0.8rem; margin-bottom: 0.5rem;">
-                        Salarial - 25 Feb 2026</div>
+                    <div class="news-card-category">Salarial - 25 Feb 2026</div>
                     <h3>Escala Salarial Febrero 2026</h3>
                     <p>Nueva escala salarial vigente.</p>
                     <a href="https://fatfa.org.ar/2026/02/25/escala-salarial-febrero-2026/" target="_blank"
-                        rel="noopener noreferrer" class="btn btn-farmacia" style="margin-top: 1rem;">Leer más</a>
+                        rel="noopener noreferrer" class="btn btn-farmacia mt-1">Leer más</a>
                 </article>
                 <article class="news-card">
-                    <div style="margin-bottom: 1rem;">
+                    <div class="news-card-img-wrapper">
                         <img src="https://fatfa.org.ar/wp-content/uploads/2026/01/flyer-web-UF-8-400x250.jpg"
-                            alt="Unidad Federal N°8"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" loading="lazy">
+                            alt="Unidad Federal N°8" class="news-card-img" loading="lazy">
                     </div>
-                    <div
-                        style="color: var(--verde-farmacia); font-weight: 700; font-size: 0.8rem; margin-bottom: 0.5rem;">
-                        Institucional - 19 Ene 2026</div>
+                    <div class="news-card-category">Institucional - 19 Ene 2026</div>
                     <h3>Unidad Federal N°8</h3>
                     <p>Información importante sobre la Unidad Federal N°8 de FATFA.</p>
                     <a href="https://fatfa.org.ar/2026/01/19/25649/" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-farmacia" style="margin-top: 1rem;">Leer más</a>
+                        class="btn btn-farmacia mt-1">Leer más</a>
                 </article>
                 <article class="news-card">
-                    <div style="margin-bottom: 1rem;">
+                    <div class="news-card-img-wrapper">
                         <img src="https://fatfa.org.ar/wp-content/uploads/2025/11/ESCALA-FATFA-noviembre-400x250.jpg"
-                            alt="Escala salarial noviembre 2025"
-                            style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" loading="lazy">
+                            alt="Escala salarial noviembre 2025" class="news-card-img" loading="lazy">
                     </div>
-                    <div
-                        style="color: var(--verde-farmacia); font-weight: 700; font-size: 0.8rem; margin-bottom: 0.5rem;">
-                        Salarial - 22 Nov 2025</div>
+                    <div class="news-card-category">Salarial - 22 Nov 2025</div>
                     <h3>Escala salarial noviembre 2025</h3>
                     <p>Nueva escala salarial vigente.</p>
                     <a href="https://fatfa.org.ar/2025/11/22/escala-salarial-noviembre-2025/" target="_blank"
-                        rel="noopener noreferrer" class="btn btn-farmacia" style="margin-top: 1rem;">Leer más</a>
+                        rel="noopener noreferrer" class="btn btn-farmacia mt-1">Leer más</a>
                 </article>
             </div>
         </div>
     </section>
 
-    <section id="beneficios" style="padding: 4rem 0;">
+    <section id="beneficios" class="section-padding">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;">
+            <div class="section-header">
                 <h2>Beneficios Exclusivos</h2>
                 <p>Conocé todos los beneficios que AMTFAR te brinda con tu aporte sindical.</p>
             </div>
 
             <div class="hero-grid" style="align-items: center;">
                 <div>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
-                                style="color: var(--verde-farmacia); margin-right: 10px;"></i>
-                            <strong>Escolares:</strong> Kits, guardapolvos y reintegros.
-                        </li>
-                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
-                                style="color: var(--verde-farmacia); margin-right: 10px;"></i> <strong>Salud:</strong>
-                            Reintegros en Ortopedia, Odontología y Oftalmología.</li>
-                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
-                                style="color: var(--verde-farmacia); margin-right: 10px;"></i>
-                            <strong>Asesoramientos:</strong> Jurídico, previsional y liquidaciones.
-                        </li>
-                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
-                                style="color: var(--verde-farmacia); margin-right: 10px;"></i> <strong>Recién
-                                Nacidos:</strong> Reintegros en Pañales y leche.</li>
-                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
-                                style="color: var(--verde-farmacia); margin-right: 10px;"></i> <strong>Sepelio:</strong>
-                            Cobertura 100% de salón velatorio.</li>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>Escolares:</strong> Kits, guardapolvos y
+                            reintegros.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Salud:</strong> Reintegros en Ortopedia,
+                            Odontología y Oftalmología.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Asesoramientos:</strong> Jurídico, previsional y
+                            liquidaciones.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Recién Nacidos:</strong> Reintegros en Pañales y
+                            leche.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Sepelio:</strong> Cobertura 100% de salón
+                            velatorio.</li>
                     </ul>
-                    <div style="margin-top: 2rem;">
+                    <div class="mt-2">
                         <a href="beneficios.html" class="btn btn-empleado">Ver todos los detalles</a>
                     </div>
                 </div>
-                <div style="text-align: center;">
-                    <img src="assets/img/beneficios.webp" alt="Beneficios AMTFAR"
-                        style="max-width: 100%; max-height: 500px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"
-                        loading="lazy">
+                <div class="text-center">
+                    <img src="assets/img/beneficios.webp" alt="Beneficios AMTFAR" class="benefits-img" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="turismo" style="padding: 4rem 0; background-color: var(--gris-suave);">
+    <section id="turismo" class="section-padding" style="background-color: var(--gris-suave);">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;">
+            <div class="section-header">
                 <h2>Nuestros Destinos</h2>
                 <p>Explorá los centros recreativos y hoteles de nuestra Federación.</p>
             </div>
@@ -273,7 +245,7 @@
                         onclick="currentSlide(3)"></span>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 3rem;">
+            <div class="text-center" style="margin-top: 3rem;">
                 <a href="turismo.html" class="btn btn-farmacia" style="width: auto; padding: 12px 40px;">Ver todos los
                     destinos y tarifas</a>
             </div>
@@ -286,14 +258,11 @@
                 <h2>Contactanos:</h2>
                 <ul class="lista-contacto">
                     <li><i class="fas fa-map-marker-alt"></i> Belgrano 1644 – Posadas. CP 3300.</li>
-                    <li><i class="fas fa-phone"></i> <a href="tel:+543764438240"
-                            style="text-decoration: none; color: inherit;">+54 376-4438240</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+543764438240">+54 376-4438240</a></li>
                     <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5493764280245" target="_blank"
-                            rel="noopener noreferrer" style="text-decoration: none; color: inherit;">+54 3764-280245</a>
-                    </li>
+                            rel="noopener noreferrer">+54 3764-280245</a></li>
                     <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5493764700290" target="_blank"
-                            rel="noopener noreferrer" style="text-decoration: none; color: inherit;">+54 3764-700290</a>
-                    </li>
+                            rel="noopener noreferrer">+54 3764-700290</a></li>
                     <li><i class="fas fa-envelope"></i> administracion@amtfar.com.ar</li>
                     <li><i class="fas fa-clock"></i> HORARIO DE ATENCIÓN: lunes a viernes de 9 a 17hs.</li>
                 </ul>
@@ -301,7 +270,7 @@
             <div class="mapa-container">
                 <iframe
                     src="https://maps.google.com/maps?q=Belgrano+1644,+Posadas,+Misiones&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                    width="100%" height="350" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy"
+                    width="100%" height="350" allowfullscreen="" loading="lazy"
                     title="Mapa de ubicación de AMTFAR"></iframe>
             </div>
         </div>
@@ -309,8 +278,7 @@
 
     <footer class="main-footer">
         <div class="container footer-grid">
-            <div class="footer-brand"><span
-                    style="font-size: 2rem; font-weight: 900; color: var(--verde-farmacia);">AMT<span>FAR</span></span>
+            <div class="footer-brand"><span class="brand-title">AMT<span>FAR</span></span>
                 <p>Tel: 376-4438240 - email: administracion@amtfar.com.ar</p>
                 <p>© 2026 AMTFAR - Asociación Misionera de Trabajadores de Farmacias.</p>
             </div>

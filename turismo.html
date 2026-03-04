@@ -11,91 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=1.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .destino-full-card {
-            background: var(--blanco);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            margin-bottom: 4rem;
-            border: 1px solid #eee;
-        }
 
-        .promo-banner-top {
-            background: var(--verde-farmacia);
-            color: white;
-            text-align: center;
-            padding: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-        }
-
-        .carousel-static {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 10px;
-            padding: 10px 0;
-            scrollbar-width: thin;
-            scrollbar-color: var(--verde-farmacia) #eee;
-        }
-
-        .carousel-item {
-            flex: 0 0 100%;
-            scroll-snap-align: center;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid #ddd;
-            background: #f9f9f9;
-        }
-
-        .carousel-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .mapa-box {
-            height: 250px;
-            width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #ddd;
-            margin-top: 1.5rem;
-        }
-
-        .destino-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-        }
-
-        @media (min-width: 1024px) {
-            .destino-grid {
-                grid-template-columns: 1.2fr 1fr;
-            }
-
-            .info-column {
-                padding: 3rem !important;
-            }
-        }
-    </style>
 </head>
 
 <body>
     <header class="main-header">
         <div class="container nav-wrapper">
-            <a href="index.html" class="brand"
-                style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                <img src="assets/img/logo-amtfar.webp" alt="Logo AMTFAR" style="height: 50px;">
-                <div style="display: flex; flex-direction: column; line-height: 1.2;">
-                    <span class="logo-text"
-                        style="font-size: 1.6rem; font-weight: 900; color: var(--verde-farmacia);">AMT<span
-                            style="color: var(--oscuro);">FAR</span></span>
-                    <span class="logo-text header-subtitle"
-                        style="font-size: 0.8rem; font-weight: 500; color: var(--oscuro); letter-spacing: 0.5px;">Asociación
-                        Misionera de Trabajadores de Farmacia</span>
+            <a href="index.html" class="brand">
+                <img src="assets/img/logo-amtfar.webp" alt="Logo AMTFAR" class="brand-logo">
+                <div class="brand-text-container">
+                    <span class="logo-text brand-title">AMT<span>FAR</span></span>
+                    <span class="logo-text header-subtitle">Asociación Misionera de Trabajadores de Farmacia</span>
                 </div>
             </a>
             <button class="mobile-menu-toggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
@@ -105,9 +31,11 @@
                         <a href="#" style="cursor: pointer;">Salarios <i class="fas fa-chevron-down"
                                 style="font-size: 0.8em; margin-left: 5px;"></i></a>
                         <ul class="dropdown-content">
-                            <li><a href="https://fatfa.org.ar/escalas-salariales/" target="_blank" rel="noopener noreferrer">Escalas
+                            <li><a href="https://fatfa.org.ar/escalas-salariales/" target="_blank"
+                                    rel="noopener noreferrer">Escalas
                                     Salariales</a></li>
-                            <li><a href="https://fatfa.org.ar/actas-acuerdo/" target="_blank" rel="noopener noreferrer">Actas Acuerdo</a></li>
+                            <li><a href="https://fatfa.org.ar/actas-acuerdo/" target="_blank"
+                                    rel="noopener noreferrer">Actas Acuerdo</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -142,8 +70,8 @@
 
     <div class="promo-banner-top">Beneficios FATFA - Temporada 2026</div>
 
-    <main class="container" style="padding: 3rem 0;">
-        <h1 style="text-align: center; margin-bottom: 3rem; color: var(--verde-farmacia);">Turismo Social</h1>
+    <main class="container section-padding">
+        <h1 class="text-center brand-title mb-3">Turismo Social</h1>
 
         <article class="destino-full-card">
             <div class="destino-grid">
@@ -166,7 +94,7 @@
                             width="420" height="420" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade" title="Mapa de Cuesta Blanca"></iframe>
                     </div>
-                    <a href="#contacto" class="btn btn-empleado" style="margin-top: 1.5rem;">Solicitar Reserva</a>
+                    <a href="#contacto" class="mt-1 btn btn-empleado">Solicitar Reserva</a>
                 </div>
             </div>
         </article>
@@ -192,7 +120,7 @@
                             width="420" height="420" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade" title="Mapa de Mar del Plata"></iframe>
                     </div>
-                    <a href="#contacto" class="btn btn-empleado" style="margin-top: 1.5rem;">Solicitar Reserva</a>
+                    <a href="#contacto" class="mt-1 btn btn-empleado">Solicitar Reserva</a>
                 </div>
             </div>
         </article>
@@ -216,14 +144,14 @@
                             width="420" height="420" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade" title="Mapa de Salta"></iframe>
                     </div>
-                    <a href="#contacto" class="btn btn-empleado" style="margin-top: 1.5rem;">Solicitar Reserva</a>
+                    <a href="#contacto" class="mt-1 btn btn-empleado">Solicitar Reserva</a>
                 </div>
             </div>
         </article>
     </main>
 
     <!-- Carousel Turismo -->
-    <section class="section-carousel" style="padding: 2rem 0; background-color: var(--gris-suave);">
+    <section class="section-carousel section-padding" style="background-color: var(--gris-suave);">
         <div class="container">
             <div class="custom-carousel">
                 <div class="carousel-inner">
@@ -286,12 +214,11 @@
                 <h2>Contactanos:</h2>
                 <ul class="lista-contacto">
                     <li><i class="fas fa-map-marker-alt"></i> Belgrano 1644 – Posadas. CP 3300.</li>
-                    <li><i class="fas fa-phone"></i> <a href="tel:+543764438240"
-                            style="text-decoration: none; color: inherit;">+54 376-4438240</a></li>
-                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5493764280245" target="_blank" rel="noopener noreferrer"
-                            style="text-decoration: none; color: inherit;">+54 3764-280245</a></li>
-                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5493764700290" target="_blank" rel="noopener noreferrer"
-                            style="text-decoration: none; color: inherit;">+54 3764-700290</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+543764438240">+54 376-4438240</a></li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5493764280245" target="_blank"
+                            rel="noopener noreferrer">+54 3764-280245</a></li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5493764700290" target="_blank"
+                            rel="noopener noreferrer">+54 3764-700290</a></li>
                     <li><i class="fas fa-envelope"></i> administracion@amtfar.com.ar</li>
                     <li><i class="fas fa-clock"></i> HORARIO DE ATENCIÓN: lunes a viernes de 9 a 17hs.</li>
                 </ul>
@@ -299,7 +226,7 @@
             <div class="mapa-container">
                 <iframe
                     src="https://maps.google.com/maps?q=Belgrano+1644,+Posadas,+Misiones&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                    width="100%" height="350" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy"
+                    width="100%" height="350" allowfullscreen="" loading="lazy"
                     title="Mapa de ubicación de AMTFAR"></iframe>
             </div>
         </div>
@@ -307,8 +234,7 @@
 
     <footer class="main-footer">
         <div class="container footer-grid">
-            <div class="footer-brand"><span
-                    style="font-size: 2rem; font-weight: 900; color: var(--verde-farmacia);">AMT<span>FAR</span></span>
+            <div class="footer-brand"><span class="brand-title">AMT<span>FAR</span></span>
                 <p>Tel: 376-4438240 - email: administracion@amtfar.com.ar</p>
                 <p>© 2026 AMTFAR - Asociación Misionera de Trabajadores de Farmacias.</p>
             </div>
