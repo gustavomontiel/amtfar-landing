@@ -1,0 +1,8 @@
+/* TEAM */
+  Developer: Equipo Técnico AMTFAR
+  Location: Posadas, Misiones, Argentina
+
+/* SITE */
+  Last update: 2026/03/08
+  Language: Spanish
+  Doctype: HTML5

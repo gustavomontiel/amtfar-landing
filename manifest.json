@@ -1,0 +1,23 @@
+{
+  "name": "AMTFAR",
+  "short_name": "AMTFAR",
+  "description": "Asociación Misionera de Trabajadores de Farmacia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a6333",
+  "icons": [
+    {
+      "src": "/assets/img/logo-amtfar.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/img/logo-amtfar.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}
