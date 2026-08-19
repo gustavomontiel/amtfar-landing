@@ -315,6 +315,13 @@ img {
     padding: 2rem;
     border-radius: 12px;
     border-left: 5px solid var(--verde-farmacia);
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card .btn-farmacia {
+    margin-top: auto;
+    align-self: flex-start;
 }
 
 .news-card-img-wrapper {
